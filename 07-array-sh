@@ -4,3 +4,5 @@
 PERSONS=("ramesh" "suresh" "Sachin")
 
 echo "First Person: ${PERSON[0]}"
+
+echo "First Person: ${PERSON[@]}" # @ means all the peoples.
