@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# this is called array, instead of single value it can hold mutiple values.
+PERSONS=("ramesh" "suresh" "Sachin")
+
+echo "First Person: ${PERSON[0]}"
