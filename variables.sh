@@ -1,4 +1,3 @@
 #!/bin/bash
 
-DATE=$(date)
-echo "the present time is now:$DATE"
+echo "the present time is now:$(date)
