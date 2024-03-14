@@ -3,6 +3,6 @@
 # this is called array, instead of single value it can hold mutiple values.
 PERSONS=("ramesh" "suresh" "Sachin")
 
-echo "First Person: ${PERSON[0]}"
+echo "First Person: ${PERSONS[0]}"
 
-echo "First Person: ${PERSON[@]}" # @ means all the peoples.
+echo "All Persons: ${PERSONS[@]}" # @ means all the peoples.
