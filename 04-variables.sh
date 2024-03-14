@@ -6,3 +6,5 @@ NUMBER1=$1
 NUMBER1=$2
 
 SUM=$((NUMBER1+NUMBER2))
+
+echo "addition of 2 numbers are :$SUM"
