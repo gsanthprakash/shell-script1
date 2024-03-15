@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-DATE=( date +%F-%H-%M-%S )
+DATE=$(date +%F-%H-%M-%S)
 USERID=$(id -u)
 
 VALIDATE(){
@@ -15,8 +15,8 @@ VALIDATE(){
 }
 
 # it is our responsibility again installation is success or not.
-yum install mysql -y  &>>log.file
+yum install mysql -y  &>>log.file $DATE
 VALIDATE $? "Installing Mysql"
 
-yum install postfix -y &>>log.file
+yum install postfix -y &>>log.file $DATE
 VALIDATE $? "Installing postfix"
