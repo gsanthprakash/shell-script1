@@ -40,4 +40,5 @@ do
         VALIDATE $? "$i" 
     else
         echo -e "$Y $i already installed"
+    fi
 done
