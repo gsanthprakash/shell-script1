@@ -11,7 +11,7 @@ else
 fi
 
 # it is our responsibility again installation is success or not.
-yum install mysql -y >>&&log
+yum install mysql -y 
 
 if [ $USERID -ne 0 ]
 then
