@@ -11,4 +11,4 @@ else
 fi
 
 # it is our responsibility again installation is success or not.
-yum install mysql11 -y
+yum install mysql -y
