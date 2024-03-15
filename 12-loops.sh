@@ -25,6 +25,7 @@ VALIDATE(){
         exi 1
     else
         echo -e "Installing $2 .... $G SUCCESS $N"
+    fi
 }
 
 
