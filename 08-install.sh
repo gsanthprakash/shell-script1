@@ -10,4 +10,5 @@ else
     echo "root user, please proceed"
 fi
 
-yum install mysql -y
+# it is our responsibility again installation is success or not.
+yum install mysql11 -y
