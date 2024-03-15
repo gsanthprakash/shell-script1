@@ -14,7 +14,7 @@ VALIDATE(){
 
 # it is our responsibility again installation is success or not.
 yum install mysql -y  
-VALIDATE $? yum install mysql -y 
+VALIDATE $? "Installing Mysql"
 
 yum install postfix -y
-VALIDATE $? yum install postfix -y
+VALIDATE $? "Installing postfix"
