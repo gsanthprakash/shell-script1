@@ -14,7 +14,7 @@ then
     echo -e "$R ERROR: please proceed with root user $N"
     exit 1
 else
-    echo "you are root user"
+    echo - e "$G you are root user"
 fi
 
 
