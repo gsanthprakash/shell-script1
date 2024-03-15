@@ -15,8 +15,8 @@ VALIDATE(){
 }
 
 # it is our responsibility again installation is success or not.
-yum install mysql -y  &>>log.file $DATE
+yum install mysql -y  &>>log.file
 VALIDATE $? "Installing Mysql"
 
-yum install postfix -y &>>log.file $DATE
+yum install postfix -y &>>log.file
 VALIDATE $? "Installing postfix"
