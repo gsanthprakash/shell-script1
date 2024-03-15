@@ -1,12 +1,13 @@
 #!/bin/bash
 
-USERID=$(id-u)
+USERID=$(id -u)
 
 if [[ $USERID -ne 0 ]]
 then
-    echo "your root user, please proceed
+    echo "you are not root user, please proceed with root user
+    exit 1
 else 
-    echo "you are not root user, please proceed with root user.
+    echo "root user, please proceed"
 fi
 
 yum install git -y
