@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+DATE=( date +%F-%H-%M-%S )
 USERID=$(id -u)
 
 VALIDATE(){
