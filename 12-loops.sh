@@ -11,12 +11,11 @@ LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 USERID=$(id -u)
 if [ $USERID -ne 0 ];
 then
-    echo -e " $R ERROR: please proceed with root user $N"
+    echo -e "$R ERROR: please proceed with root user $N"
     exit 1
 else
-    echo "you are root user:
+    echo "you are root user"
 fi
-
 
 
 # all arguments are in $@ 
