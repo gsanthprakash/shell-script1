@@ -2,7 +2,7 @@
 
 APP_LOGS_DIR=/home/cenots/app-logs
 
-DATE(date +%F)
+DATE=(date +%F)
 LOGSDIR=/home/cenots/shell-script-logs
 SCRIPT_NAME=$0
 LOGSFILE=$LOGSDIR/$0-$DATE.log
