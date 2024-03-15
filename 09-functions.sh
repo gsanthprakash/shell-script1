@@ -16,5 +16,5 @@ VALIDATE(){
 yum install mysql -y 
 VALIDATE $?
 
-yum install pstfix -y
+yum install postfix -y
 VALIDATE $?
