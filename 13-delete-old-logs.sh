@@ -3,7 +3,7 @@
 APP_LOGS_DIR=/home/cenots/app-logs
 
 DATE=(date +%F)
-LOGSDIR=/home/cenots/shell-script-logs
+LOGSDIR=/home/centos/shell-script-logs
 SCRIPT_NAME=$0
 LOGSFILE=$LOGSDIR/$0-$DATE.log
 
