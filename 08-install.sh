@@ -2,7 +2,7 @@
 
 USERID=$(id-u)
 
-if [[ $USERID == 0 ]]
+if [[ $USERID -ne 0 ]]
 then
     echo "your root user, please proceed
 else 
