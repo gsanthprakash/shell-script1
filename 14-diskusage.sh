@@ -31,4 +31,4 @@ do
 
 done >>> $DISK_USAGE
 
-echo "message:
+echo "message:"
