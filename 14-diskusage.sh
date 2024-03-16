@@ -34,3 +34,7 @@ do
 done <<< $DISK_USAGE
 
 echo -e "Message:\n$message"
+
+if [ -n "$message" ]; then
+    echo -e "Subject: High Disk Usage Alert\n\n$message" | mail -s "High Disk Usage Alert" gspvsr@yahoo.com
+fi
