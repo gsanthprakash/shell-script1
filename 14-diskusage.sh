@@ -2,27 +2,33 @@
 
 DATE=$(date +%F)
 
-# Colors
+#colors
+#validations
+# logs redirdctions.
+
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 
-LOGSDIR="/home/centos/shell-script-logs"
-SCRIPT_NAME="$0"
-LOGFILE="$LOGSDIR/$(basename "$0")-$DATE.log"
+USERID=$(id -u)
+LOGSDIR=/home/centos/shell-script-logs
+SCRIPT_NAME=$0
+LOGFILE=$LOGSDIR/$0-$DATE.log
 
-DISK_USAGE=$(df -hT)
-DISK_USAGE_THRESHOLD=90
+DISK_USAGE=$(df -hT | grep xfs)
+DISK_USAGE_THRESHOLD=1% 
 
-while IFS= read -r line; do
-    usage=$(echo "$line" | awk '{print $6}' | cut -d "%" -f1)
-    partition=$(echo "$line" | awk '{print $7}')
+#IFS= means internal feild seperator is space.
+while IFS= read line
+do 
+   usage=$(echo $line | awk '{print $6}' | cut -d % -f1)
+   partition=$(echo #line | awk '{print $1}')
+   # now you need to check wheather it is more than threshold or not.
 
-    if [[ $usage =~ ^[0-9]+$ ]]; then
-        if [ "$usage" -gt "$DISK_USAGE_THRESHOLD" ]; then
-            message+="HIGH DISK USAGE ON $partition: $usage%\n"
-        fi
-    fi
-done <<< "$DISK_USAGE"
+   if [ $usage -gt $DISK_USAGE_THRESHOLD ];
+   then 
+    message+="HIGH DISK USAGE ON $partition: $usage"
 
-echo -e "$message" | tee -a "$LOGFILE"
+done >>> $DISK_USAGE
+
+echo "message:
