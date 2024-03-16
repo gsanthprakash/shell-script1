@@ -18,10 +18,11 @@ while IFS= read -r line; do
     usage=$(echo "$line" | awk '{print $6}' | cut -d "%" -f1)
     partition=$(echo "$line" | awk '{print $7}')
 
-    if [ "$usage" -gt "$DISK_USAGE_THRESHOLD" ]; then
-        message+="HIGH DISK USAGE ON $partition: $usage%\n"
+    if [[ $usage =~ ^[0-9]+$ ]]; then
+        if [ "$usage" -gt "$DISK_USAGE_THRESHOLD" ]; then
+            message+="HIGH DISK USAGE ON $partition: $usage%\n"
+        fi
     fi
 done <<< "$DISK_USAGE"
 
 echo -e "$message" | tee -a "$LOGFILE"
-
