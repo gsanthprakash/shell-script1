@@ -21,7 +21,7 @@ DISK_USAGE_THRESHOLD=1%
 #IFS= means internal feild seperator is space.
 while IFS= read line
 do 
-   usage=$(echo $line | awk '{print $6}' | cut -d % -f1)
+   usage=$(echo $line | awk '{print $6}' | cut -d "%" -f1)
    partition=$(echo #line | awk '{print $1}')
    # now you need to check wheather it is more than threshold or not.
 
@@ -31,4 +31,4 @@ do
 
 done >>> $DISK_USAGE
 
-echo "message:"
+echo "message"
