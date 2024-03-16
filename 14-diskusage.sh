@@ -16,7 +16,7 @@ SCRIPT_NAME=$0
 LOGFILE=$LOGSDIR/$0-$DATE.log
 
 DISK_USAGE=$(df -hT | grep xfs)
-DISK_USAGE_THRESHOLD=1
+DISK_USAGE_THRESHOLD=0.5
 message=""
 
 #IFS= means internal feild seperator is space.
