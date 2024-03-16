@@ -29,6 +29,6 @@ do
    then 
     message+="HIGH DISK USAGE ON $partition: $usage"
 
-done >>> $DISK_USAGE
+done <<< $DISK_USAGE
 
-echo "message"
+echo "message: $message"
